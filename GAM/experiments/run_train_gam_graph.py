@@ -44,7 +44,7 @@ flags.DEFINE_string(
     'dataset_name', 'cora',
     'Dataset name. Supported options are: cora, citeseer, pubmed.')
 flags.DEFINE_string('data_path', '', 'Path to data.')
-flags.DEFINE_bool('row_normalize', False,
+flags.DEFINE_bool('row_normalize', True,
                   'Whether to row normalize the data. Important for GCN.')
 flags.DEFINE_string('data_output_dir', './outputs',
                     'Path to a folder where to save the preprocessed dataset.')
@@ -64,7 +64,7 @@ flags.DEFINE_string(
     'stored.')
 flags.DEFINE_string('logging_config', '', 'Path to logging configuration file.')
 flags.DEFINE_string(
-    'model_cls', 'mlp', 'Model type for the classification model. '
+    'model_cls', 'gcn', 'Model type for the classification model. '
     'Options are: `mlp`, `cnn`, `wide_resnet`, `gcn`.')
 flags.DEFINE_string(
     'model_agr', 'mlp',

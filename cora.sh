@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+CUDA_VISIBLE_DEVICES=0 python3.7 -m GAM.experiments.run_train_gam_graph --dataset_name cora --data_path=/home/dongkwan/graph-data/Cora --min_confidence_new_label=0.33 "$@" 2>&1 | tee -a cora_`date "+%s"`.l
